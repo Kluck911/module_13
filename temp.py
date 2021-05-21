@@ -1,8 +1,41 @@
-a = '' # пустая строка
-b = a or 1
-print(b)
+print(round(2.53*5.36, 2))
 
-'''n = int(input("Введите число\n"))
+'''
+# 0 1 2 3 4 5 6 7 8 9
+M = [i for i in range(10, 0, -1)]
+# 10 9 8 7 6 5 4 3 2 1
+
+for a, b in zip(L,M):
+    print('| a =', a, 'b =', b, '|  a * b = ', a * b)
+
+# ИЛИ N = [a*b for a, b in zip(L,M)]
+# print(N)
+
+
+нужно записать логическое выражение, используя all([ ]) 
+и any([ ]) над списком четности, если его результат будет 
+истинным тогда и только тогда, когда в списке есть хотя бы 
+один четный и хотя бы один нечетный элемент.
+
+L = [int(input()) % 2 == 0 for i in range(5)]
+print(L)
+print(any(L) and not all(L))
+
+---
+L = list(map(int, input().split()))
+print(L)
+print(any(L))
+
+a = int(input())
+
+if all([type(a) == int,
+       100 <= a <= 999,
+       a % 2 == 0,
+       a % 3 == 0]):
+    print("Число удовлетворяет условиям")
+
+
+n = int(input("Введите число\n"))
 
 while True:
     if n % 2 == 0:
